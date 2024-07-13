@@ -2,9 +2,10 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
     // Function to read the HTML list of search results and convert it to a JSON string
     console.log("START");
+
     // Event listener for the Save button
     var digit_buttons = document.getElementsByClassName('btn-input-digit')
     for (var i = 0; i < digit_buttons.length; i++)
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    var clear_buttons = document.getElementsByClassName('btn-input-decimalpoint')
+    var clear_buttons = document.getElementsByClassName('btn-input-clear')
     for (var i = 0; i < clear_buttons.length; i++) {
         clear_buttons[i].addEventListener('click', function () {
             var caller = this;
@@ -83,8 +84,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    var calc_button = document.getElementById('btn-input-decimalpoint')
-    calc_button.addEventListener('click', function () {
+    var calc_button = document.getElementById('btn-calculate')
+    calc_button.addEventListener('click', async function () {
         var caller = this;
 
         if (caller instanceof HTMLElement)
@@ -92,17 +93,31 @@ document.addEventListener('DOMContentLoaded', function () {
             var textbox = document.getElementById('calc-display');
             var expression = textbox.value
             var result = await calculate_expression(expression);
-            var save_result = await save_result(expression, result);
+            var saving_result = await save_result(expression, result);
             
 
         }
     });
 
-    function calculate_expression(expression)
+    async function calculate_expression(expression)
     {
+        console.log("EXPR: " + await api_test())
 
 
     }
+    async function save_result(expression, result)
+    {
+        console.log("DAVER: " + await api_test())
 
+    }
+    async function api_test()
+    {
+        var fethres = await fetch("https://open.er-api.com/v6/latest/CZK").then(response => response.json()).then(x => x.result)
+        return fethres;
+    }
+
+
+
+    
 
 });
