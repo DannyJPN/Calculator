@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calculator.UI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fabb6d8f5cb1e9201cb1cc7162a85e2d5e0c9928")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7019a7d7b1f12995a3a16818754ed842e0e9e2c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calculator.UI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calculator.UI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

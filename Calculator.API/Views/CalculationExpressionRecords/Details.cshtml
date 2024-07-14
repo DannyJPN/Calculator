@@ -1,0 +1,24 @@
+﻿@model Calculator.API.DTO.CalculationExpressionRecord
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>CalculationExpressionRecord</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Record)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Record)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

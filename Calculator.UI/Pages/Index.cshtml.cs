@@ -28,9 +28,9 @@ namespace Calculator.UI.Pages
         {
             try
             {
-                var result = new DataTable().Compute(Display, null);
+                string? result = new DataTable().Compute(Display, null).ToString();
                 History.Add($"{Display} = {result}");
-                Display = result.ToString();
+                Display = result==null?"":result;
             }
             catch (Exception ex)
             {
