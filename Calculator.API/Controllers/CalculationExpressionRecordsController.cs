@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,148 +10,49 @@ using Calculator.API.DatabaseContexts;
 
 namespace Calculator.API.Controllers
 {
-    public class CalculationExpressionRecordsController : Controller
+    [ApiController]
+    [Route("[controller]")]
+    public class CalculationExpressionRecordsController : ControllerBase
     {
+        private readonly ILogger<CalculationExpressionRecordsController> _logger;
         private readonly CalculationExpressionRecordContext _context;
 
-        public CalculationExpressionRecordsController(CalculationExpressionRecordContext context)
+        public CalculationExpressionRecordsController(ILogger<CalculationExpressionRecordsController> logger, CalculationExpressionRecordContext context)
         {
+            _logger = logger;
             _context = context;
         }
 
-        // GET: CalculationExpressionRecords
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.CalculationExpressionRecord.ToListAsync());
-        }
 
-        // GET: CalculationExpressionRecords/Details/5
-        public async Task<IActionResult> Details(int? id)
+        [HttpPost("/Save")]
+        public async Task<IActionResult> SaveCalculationRecord([FromBody] CalculationExpressionRecord record)
         {
-            if (id == null)
+            if (record == null || string.IsNullOrEmpty(record.Record))
             {
-                return NotFound();
+                _logger.LogWarning("Invalid input received for creating calculation record.");
+                return BadRequest("Invalid input.");
             }
 
-            var calculationExpressionRecord = await _context.CalculationExpressionRecord
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (calculationExpressionRecord == null)
+            try
             {
-                return NotFound();
-            }
-
-            return View(calculationExpressionRecord);
-        }
-
-        // GET: CalculationExpressionRecords/Create
-        public IActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: CalculationExpressionRecords/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Record")] CalculationExpressionRecord calculationExpressionRecord)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(calculationExpressionRecord);
+                _context.CalculationExpressionRecord.Add(record);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                _logger.LogInformation("Calculation record created successfully with ID: {ID}", record.ID);
+                return Ok(record);
             }
-            return View(calculationExpressionRecord);
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error saving calculation record.");
+                return StatusCode(500, "Internal server error.");
+            }
         }
 
-        // GET: CalculationExpressionRecords/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        [HttpGet("/Calculate")]
+        public IActionResult Calculate([FromQuery] string expr)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var calculationExpressionRecord = await _context.CalculationExpressionRecord.FindAsync(id);
-            if (calculationExpressionRecord == null)
-            {
-                return NotFound();
-            }
-            return View(calculationExpressionRecord);
-        }
-
-        // POST: CalculationExpressionRecords/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Record")] CalculationExpressionRecord calculationExpressionRecord)
-        {
-            if (id != calculationExpressionRecord.ID)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(calculationExpressionRecord);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!CalculationExpressionRecordExists(calculationExpressionRecord.ID))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            return View(calculationExpressionRecord);
-        }
-
-        // GET: CalculationExpressionRecords/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var calculationExpressionRecord = await _context.CalculationExpressionRecord
-                .FirstOrDefaultAsync(m => m.ID == id);
-            if (calculationExpressionRecord == null)
-            {
-                return NotFound();
-            }
-
-            return View(calculationExpressionRecord);
-        }
-
-        // POST: CalculationExpressionRecords/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var calculationExpressionRecord = await _context.CalculationExpressionRecord.FindAsync(id);
-            if (calculationExpressionRecord != null)
-            {
-                _context.CalculationExpressionRecord.Remove(calculationExpressionRecord);
-            }
-
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
-
-        private bool CalculationExpressionRecordExists(int id)
-        {
-            return _context.CalculationExpressionRecord.Any(e => e.ID == id);
+            // This method is currently blank as per the task instructions.
+            _logger.LogInformation("Received request to calculate expression: {Expression}", expr);
+            return Ok("Calculation endpoint is not yet implemented.");
         }
     }
 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Programs\\C#\\Calculator\\Calculator.UI\\Calculator.UI.csproj",
+      "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.UI\\Calculator.UI.csproj",
       "projectName": "Calculator.UI",
-      "projectPath": "H:\\Programs\\C#\\Calculator\\Calculator.UI\\Calculator.UI.csproj",
+      "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.UI\\Calculator.UI.csproj",
       "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-      "outputPath": "H:\\Programs\\C#\\Calculator\\Calculator.UI\\obj\\",
+      "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.UI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
