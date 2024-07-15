@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.API\\Calculator.API.csproj": {}
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\Calculator.API.csproj": {}
   },
   "projects": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.API\\Calculator.API.csproj": {
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\Calculator.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.API\\Calculator.API.csproj",
+        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\Calculator.API.csproj",
         "projectName": "Calculator.API",
-        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.API\\Calculator.API.csproj",
+        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\Calculator.API.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.API\\obj\\",
+        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.Data\\Calculator.Data.csproj": {
-                "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.Data\\Calculator.Data.csproj"
+              "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj": {
+                "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj"
               }
             }
           }
@@ -69,6 +69,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.7, )"
             },
@@ -110,14 +114,14 @@
         }
       }
     },
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.Data\\Calculator.Data.csproj": {
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.Data\\Calculator.Data.csproj",
-        "projectName": "Calculator.Data",
-        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.Data\\Calculator.Data.csproj",
+        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj",
+        "projectName": "Calculator.MathLib",
+        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calc\\Calculator.Data\\obj\\",
+        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -155,26 +159,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "EntityFramework": {
-              "target": "Package",
-              "version": "[6.5.1, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[8.0.7, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.7, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

@@ -14,3 +14,9 @@ E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc\Calculator.Database\o
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc\Calculator.Database\obj\Debug\predeploy.sql
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc\Calculator.Database\obj\Debug\Calculator.Database.dll
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc\Calculator.Database\obj\Debug\Calculator.Database.pdb
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\bin\Debug\Calculator.Database.dacpac
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\bin\Debug\Calculator.Database.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\bin\Debug\Calculator.Database.pdb
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\obj\Debug\Calculator.Database.sqlproj.AssemblyReference.cache
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\obj\Debug\Calculator.Database.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\obj\Debug\Calculator.Database.pdb

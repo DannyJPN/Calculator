@@ -1,10 +1,9 @@
 @Calculator.API_HostAddress = http://localhost:5002
 
-GET {{Calculator.API_HostAddress}}/weatherforecast/
-Accept: application/json
 
-GET {{Calculator.API_HostAddress}}/calculate/
-Accept: application/json
+
+###GET {{Calculator.API_HostAddress}}/calculate/
+###Accept: application/json
 
 
 ###

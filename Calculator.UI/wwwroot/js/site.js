@@ -5,7 +5,10 @@
 document.addEventListener('DOMContentLoaded', async function () {
     // Function to read the HTML list of search results and convert it to a JSON string
     console.log("START");
-
+    const operator_regex = /[+\-*\/]/;
+    const dec_dot_regex = /[\.]/;
+    const number_regex = /[0-9]$/;
+    const records_count = 10;
     // Event listener for the Save button
     var digit_buttons = document.getElementsByClassName('btn-input-digit')
     for (var i = 0; i < digit_buttons.length; i++) {
@@ -20,9 +23,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
 
     var operator_buttons = document.getElementsByClassName('btn-input-operator')
-    const operator_regex = /[+\-*\/]/;
-    const dec_dot_regex = /[\.]/;
-    const number_regex = /[0-9]$/;
+
     for (var i = 0; i < operator_buttons.length; i++) {
         operator_buttons[i].addEventListener('click', function () {
             var caller = this;
@@ -77,7 +78,8 @@ document.addEventListener('DOMContentLoaded', async function () {
                 var saving_result = await save_result(expression, result);
                 if (saving_result) {
                     textbox.value = result;
-                    add_to_history(`${expression} = ${result}`);
+                    var records = await loadLastCalculations(records_count);
+                    updateHistory(records);
                 } else {
                     alert("Failed to save the calculation record.");
                 }
@@ -87,37 +89,44 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     });
 
-    async function calculate_expression(expression) {
-        try {
+    async function calculate_expression(expression)
+    {
+        try
+        {
             const response = await fetch(`https://localhost:7273/Calculate?expr=${encodeURIComponent(expression)}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json'
+            method: 'GET',
+            headers: {
+                'Content-Type': 'text/plain'
                 }
             });
-
-            if (response.ok) {
-                const result = await response.json();
-                console.log("RESULT: " + expression + " = " + result);
+            console.log(response);
+            if (response.ok)
+            {
+                const result = await response.text();
+                console.log("RESULT: " + expression + " = " + integersOnlyCheckbox.checked?round(result) :result);
                 return result.toString();
-            } else {
-                console.error("Error calculating expression:", response.statusText);
-                return "Error";
             }
-        } catch (error) {
-            console.error("Error calculating expression:", error);
-            return "Error";
+            else
+            {
+                 console.error("Error calculating expression:", response.statusText);
+                 return "Error";
+            }
+        }
+        catch (error)
+        {
+                console.error("Error calculating expression:", error);
+                return "Error";
         }
     }
 
     async function save_result(expression, result) {
         try {
-            const response = await fetch('https://localhost:7273/Create', {
+            const exp = `${expression}=${result}`;
+            const response = await fetch(`https://localhost:7273/Save?expr=${encodeURIComponent(exp)}`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ Record: `${expression} = ${result}` })
+                    'Content-Type': 'text/plain'
+                }
             });
             return response.ok;
         } catch (error) {
@@ -126,11 +135,54 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
     }
 
-    function add_to_history(record) {
-        var historyList = document.getElementById('calc-history');
-        var newItem = document.createElement('li');
-        newItem.className = 'list-group-item';
-        newItem.textContent = record;
-        historyList.appendChild(newItem);
+
+
+    // Function to load the last "count" calculations
+    async function loadLastCalculations(count) {
+        try {
+            const response = await fetch(`https://localhost:7273/LoadLastCalculations?count=${count}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                return data.records;
+            } else {
+                console.error("Error loading last calculations:", response.statusText);
+                return [];
+            }
+        } catch (error) {
+            console.error("Error loading last calculations:", error);
+            return [];
+        }
     }
+
+    // Function to update the history section with the retrieved records
+    function updateHistory(records) {
+        var historyList = document.getElementById('calc-history');
+        historyList.innerHTML = ''; // Clear existing history
+        records.forEach(record => {
+            var newItem = document.createElement('li');
+            newItem.className = 'list-group-item';
+            newItem.textContent = record;
+            historyList.appendChild(newItem);
+        });
+    }
+
+    // Event listener for the 'integers-only-checkbox'
+    var integersOnlyCheckbox = document.getElementById('integers-only-checkbox');
+    integersOnlyCheckbox.addEventListener('change', function () {
+        var decimalPointButton = document.getElementById('decimal-point-button');
+        var calcDisplay = document.getElementById('calc-display');
+        if (this.checked) {
+            decimalPointButton.disabled = true;
+        } else {
+            decimalPointButton.disabled = false;
+        }
+        calcDisplay.value = ""; // Clear the display
+    });
+
 });

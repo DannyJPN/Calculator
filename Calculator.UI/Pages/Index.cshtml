@@ -12,6 +12,10 @@
                     <div class="form-group">
                         <input type="text" id="calc-display" class="form-control" readonly />
                     </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="integers-only-checkbox">
+                        <label class="form-check-label" for="integers-only-checkbox">Integers only</label>
+                    </div>
                     <div class="row mt-3">
                         <div class="col-3">
                             <button class="btn btn-secondary btn-block btn-input-digit">1</button>
@@ -59,7 +63,7 @@
                             <button class="btn btn-secondary btn-block btn-input-digit">0</button>
                         </div>
                         <div class="col-3">
-                            <button class="btn btn-secondary btn-block btn-input-decimalpoint">.</button>
+                            <button class="btn btn-secondary btn-block btn-input-decimalpoint" id="decimal-point-button">.</button>
                         </div>
                         <div class="col-3">
                             <button class="btn btn-secondary btn-block btn-input-clear">C</button>
@@ -86,9 +90,9 @@
                             <li class="list-group-item">@item</li>
                         }
                     </ul>
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-

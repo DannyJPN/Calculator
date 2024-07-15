@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Calculator.API.DTO;
 using Calculator.API.DatabaseContexts;
+using Calculator.MathLib;
 
 namespace Calculator.API.Controllers
 {
@@ -23,11 +24,10 @@ namespace Calculator.API.Controllers
             _context = context;
         }
 
-
         [HttpPost("/Save")]
-        public async Task<IActionResult> SaveCalculationRecord([FromBody] CalculationExpressionRecord record)
+        public async Task<IActionResult> SaveCalculationRecord([FromQuery] string expr)
         {
-            if (record == null || string.IsNullOrEmpty(record.Record))
+            if (string.IsNullOrEmpty(expr))
             {
                 _logger.LogWarning("Invalid input received for creating calculation record.");
                 return BadRequest("Invalid input.");
@@ -35,9 +35,10 @@ namespace Calculator.API.Controllers
 
             try
             {
+                CalculationExpressionRecord record = new CalculationExpressionRecord(expr);
                 _context.CalculationExpressionRecord.Add(record);
                 await _context.SaveChangesAsync();
-                _logger.LogInformation("Calculation record created successfully with ID: {ID}", record.ID);
+                _logger.LogInformation("Calculation record created successfully");
                 return Ok(record);
             }
             catch (Exception ex)
@@ -50,9 +51,51 @@ namespace Calculator.API.Controllers
         [HttpGet("/Calculate")]
         public IActionResult Calculate([FromQuery] string expr)
         {
-            // This method is currently blank as per the task instructions.
-            _logger.LogInformation("Received request to calculate expression: {Expression}", expr);
-            return Ok("Calculation endpoint is not yet implemented.");
+            if (string.IsNullOrEmpty(expr))
+            {
+                _logger.LogWarning("Invalid input received for calculation.");
+                return BadRequest("Invalid input.");
+            }
+
+            try
+            {
+                var result = MathLib.MathLib.Calculate(expr);
+                _logger.LogInformation("Calculation successful: {Expression} = {Result}", expr, result);
+                return Ok(result.ToString());
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error calculating expression.");
+                return StatusCode(500, "Internal server error.");
+            }
+        }
+
+        [HttpGet("/LoadLastCalculations")]
+        public async Task<IActionResult> LoadLastCalculations([FromQuery] int count)
+        {
+            if (count <= 0)
+            {
+                _logger.LogWarning("Invalid count received for loading last calculations.");
+                return BadRequest("Invalid count.");
+            }
+
+            try
+            {
+                var records = await _context.CalculationExpressionRecord
+                    .OrderByDescending(r => r.ID)
+                    .Take(count)
+                    .Select(r => r.Record)
+                    .ToListAsync();
+
+                var result = new CalculationHistoryList { Records = records };
+                _logger.LogInformation("Loaded last {Count} calculation records successfully", count);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error loading last calculation records.");
+                return StatusCode(500, "Internal server error.");
+            }
         }
     }
 }

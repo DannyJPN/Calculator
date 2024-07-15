@@ -1,0 +1,12 @@
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\bin\Debug\net8.0\Calculator.MathLib.deps.json
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\bin\Debug\net8.0\Calculator.MathLib.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\bin\Debug\net8.0\Calculator.MathLib.pdb
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.GeneratedMSBuildEditorConfig.editorconfig
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.AssemblyInfoInputs.cache
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.AssemblyInfo.cs
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.csproj.CoreCompileInputs.cache
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.sourcelink.json
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\refint\Calculator.MathLib.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.pdb
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.MathLib\obj\Debug\net8.0\ref\Calculator.MathLib.dll
