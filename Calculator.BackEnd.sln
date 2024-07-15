@@ -6,9 +6,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.API", "Calculato
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Calculator.Database", "Calculator.Database\Calculator.Database.sqlproj", "{DC461D22-4990-4D3F-98B1-57D85481DEBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.MathLib", "Calculator.MathLib\Calculator.MathLib.csproj", "{E7A3AB5C-0B20-4B35-B943-DB184042EC2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.MathLib", "Calculator.MathLib\Calculator.MathLib.csproj", "{E7A3AB5C-0B20-4B35-B943-DB184042EC2D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculation.UnitTests", "Calculation.UnitTests\Calculation.UnitTests.csproj", "{2DC61EB0-26D4-4D45-8057-70A034D20285}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.ErrorHandler", "Calculator.ErrorHandler\Calculator.ErrorHandler.csproj", "{CCE674BE-944C-4B98-8660-DAAE93128F4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,6 +36,10 @@ Global
 		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

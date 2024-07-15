@@ -7,7 +7,7 @@ namespace Calculator.API.DatabaseContexts
     {
         public CalculationExpressionRecordContext CreateDbContext(string[] args)
         {
-            var optionsBuilder = new DbContextOptionsBuilder<CalculationExpressionRecordContext>();
+            DbContextOptionsBuilder<CalculationExpressionRecordContext> optionsBuilder = new DbContextOptionsBuilder<CalculationExpressionRecordContext>();
             optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=CalculationHistory;Trusted_Connection=True;MultipleActiveResultSets=true");
 
             return new CalculationExpressionRecordContext(optionsBuilder.Options);

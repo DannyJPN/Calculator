@@ -8451,11 +8451,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\Calculator.API.csproj",
+      "projectUniqueName": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\Calculator.API.csproj",
       "projectName": "Calculator.API",
-      "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\Calculator.API.csproj",
+      "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\Calculator.API.csproj",
       "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-      "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.API\\obj\\",
+      "outputPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8477,8 +8477,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj": {
-              "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.MathLib\\Calculator.MathLib.csproj"
+            "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj": {
+              "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj"
             }
           }
         }

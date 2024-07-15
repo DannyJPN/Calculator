@@ -6,6 +6,6 @@ namespace Calculator.API.DTO
     public class CalculationHistoryList
     {
         [JsonPropertyName("records")]
-        public List<string> Records { get; set; } = new List<string>();
+        public List<string?> Records { get; set; } = new List<string>();
     }
 }
