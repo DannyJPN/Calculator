@@ -17,35 +17,35 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Calculator.API
 build_property.RootNamespace = Calculator.API
-build_property.ProjectDir = H:\Programs\C#\CalculatorSeparated\Calculator.API\
+build_property.ProjectDir = E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator-9ca30c9\Calculator.API\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = H:\Programs\C#\CalculatorSeparated\Calculator.API
+build_property.MSBuildProjectDirectory = E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator-9ca30c9\Calculator.API
 build_property._RazorSourceGeneratorDebug = 
 
-[H:/Programs/C\#/CalculatorSeparated/Calculator.API/Views/CalculationExpressionRecords/Create.cshtml]
+[E:/ProgramFiles/Programy/GPTPilot/gpt-pilot/workspace/calculator-9ca30c9/Calculator.API/Views/CalculationExpressionRecords/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY3VsYXRpb25FeHByZXNzaW9uUmVjb3Jkc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Programs/C\#/CalculatorSeparated/Calculator.API/Views/CalculationExpressionRecords/Delete.cshtml]
+[E:/ProgramFiles/Programy/GPTPilot/gpt-pilot/workspace/calculator-9ca30c9/Calculator.API/Views/CalculationExpressionRecords/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY3VsYXRpb25FeHByZXNzaW9uUmVjb3Jkc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Programs/C\#/CalculatorSeparated/Calculator.API/Views/CalculationExpressionRecords/Details.cshtml]
+[E:/ProgramFiles/Programy/GPTPilot/gpt-pilot/workspace/calculator-9ca30c9/Calculator.API/Views/CalculationExpressionRecords/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY3VsYXRpb25FeHByZXNzaW9uUmVjb3Jkc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Programs/C\#/CalculatorSeparated/Calculator.API/Views/CalculationExpressionRecords/Edit.cshtml]
+[E:/ProgramFiles/Programy/GPTPilot/gpt-pilot/workspace/calculator-9ca30c9/Calculator.API/Views/CalculationExpressionRecords/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY3VsYXRpb25FeHByZXNzaW9uUmVjb3Jkc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Programs/C\#/CalculatorSeparated/Calculator.API/Views/CalculationExpressionRecords/Index.cshtml]
+[E:/ProgramFiles/Programy/GPTPilot/gpt-pilot/workspace/calculator-9ca30c9/Calculator.API/Views/CalculationExpressionRecords/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsY3VsYXRpb25FeHByZXNzaW9uUmVjb3Jkc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[H:/Programs/C\#/CalculatorSeparated/Calculator.API/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/ProgramFiles/Programy/GPTPilot/gpt-pilot/workspace/calculator-9ca30c9/Calculator.API/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

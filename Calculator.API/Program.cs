@@ -1,7 +1,15 @@
 using Calculator.API.DatabaseContexts;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddDbContext<CalculationExpressionRecordContext>(options =>
@@ -10,7 +18,6 @@ builder.Services.AddControllers();
 builder.Services.AddHttpLogging(o => { });
 builder.Logging.ClearProviders();
 builder.Logging.AddConsole();
-
 
 // Add CORS policy
 builder.Services.AddCors(options =>
@@ -45,4 +52,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+try
+{
+    Log.Information("Starting web host");
+    app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Host terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
