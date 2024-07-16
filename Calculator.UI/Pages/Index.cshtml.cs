@@ -27,17 +27,55 @@ namespace Calculator.UI.Pages
         {
             try
             {
+                // Validate the expression format
+                if (!IsValidExpression(Display))
+                {
+                    Display = "Invalid expression format.";
+                    _logger.LogWarning("Invalid expression format: {Expression}", Display);
+                    return Page();
+                }
+
                 string? result = new DataTable().Compute(Display, null).ToString();
-                History.Add($"{Display} = {result}");
-                Display = result == null ? "" : result;
+                if (result == null)
+                {
+                    Display = "Error";
+                    _logger.LogError("Calculation result is null for expression: {Expression}", Display);
+                }
+                else
+                {
+                    History.Add($"{Display} = {result}");
+                    Display = result;
+                }
+            }
+            catch (DivideByZeroException ex)
+            {
+                Display = "Cannot divide by zero.";
+                _logger.LogError(ex, "Divide by zero error in expression: {Expression}", Display);
             }
             catch (Exception ex)
             {
                 Display = "Error";
-                // Log the error with full stack trace
-                _logger.LogError($"Error calculating expression: {ex.Message}\n{ex.StackTrace}");
+                _logger.LogError(ex, "Error calculating expression: {Expression}", Display);
             }
             return Page();
+        }
+
+        private bool IsValidExpression(string expression)
+        {
+            expression = expression.Replace(" ", "");
+            char[] operators = { '+', '-', '*', '/' };
+            foreach (char op in operators)
+            {
+                string[] parts = expression.Split(op);
+                if (parts.Length == 2)
+                {
+                    if (double.TryParse(parts[0], out double _) && double.TryParse(parts[1], out double _))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return double.TryParse(expression, out double _);
         }
     }
 }

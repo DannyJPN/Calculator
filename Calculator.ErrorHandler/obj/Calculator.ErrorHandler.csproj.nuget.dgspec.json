@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj": {}
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj": {}
   },
   "projects": {
-    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj": {
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj",
+        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj",
         "projectName": "Calculator.ErrorHandler",
-        "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj",
+        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\obj\\",
+        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.ErrorHandler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Enrichers.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

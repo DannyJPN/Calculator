@@ -3,33 +3,31 @@
 
 // Write your JavaScript code.
 document.addEventListener('DOMContentLoaded', async function () {
-    // Function to read the HTML list of search results and convert it to a JSON string
-    console.log("START");
+    const operators = ["+", "*", "-", "/"];
     const operator_regex = /[+\-*\/]/;
     const dec_dot_regex = /[\.]/;
     const number_regex = /[0-9]$/;
     const records_count = 10;
-    // Event listener for the Save button
-    var digit_buttons = document.getElementsByClassName('btn-input-digit')
-    for (var i = 0; i < digit_buttons.length; i++) {
+    let records = await loadLastCalculations(records_count);
+    updateHistory(records);
+
+    let digit_buttons = document.getElementsByClassName('btn-input-digit');
+    for (let i = 0; i < digit_buttons.length; i++) {
         digit_buttons[i].addEventListener('click', function () {
-            var caller = this;
-            console.log("DIGIT");
+            let caller = this;
             if (caller instanceof HTMLElement) {
-                var textbox = document.getElementById('calc-display');
+                let textbox = document.getElementById('calc-display');
                 textbox.value += caller.innerText.trim();
             }
         });
     }
 
-    var operator_buttons = document.getElementsByClassName('btn-input-operator')
-
-    for (var i = 0; i < operator_buttons.length; i++) {
+    let operator_buttons = document.getElementsByClassName('btn-input-operator');
+    for (let i = 0; i < operator_buttons.length; i++) {
         operator_buttons[i].addEventListener('click', function () {
-            var caller = this;
-            console.log("OPERATOR");
+            let caller = this;
             if (caller instanceof HTMLElement) {
-                var textbox = document.getElementById('calc-display');
+                let textbox = document.getElementById('calc-display');
                 if (!operator_regex.test(textbox.value)) {
                     textbox.value += caller.innerText.trim();
                 }
@@ -37,18 +35,14 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     }
 
-    var decimaldigit_buttons = document.getElementsByClassName('btn-input-decimalpoint')
-    for (var i = 0; i < decimaldigit_buttons.length; i++) {
+    let decimaldigit_buttons = document.getElementsByClassName('btn-input-decimalpoint');
+    for (let i = 0; i < decimaldigit_buttons.length; i++) {
         decimaldigit_buttons[i].addEventListener('click', function () {
-            var caller = this;
-            console.log("DECPOINT");
+            let caller = this;
             if (caller instanceof HTMLElement) {
-                var textbox = document.getElementById('calc-display');
-                var numbers = textbox.value.split(operator_regex)
-                var lastnum = numbers[numbers.length - 1]
-                console.log(lastnum);
-                console.log(dec_dot_regex.test(lastnum));
-                console.log(number_regex.test(lastnum));
+                let textbox = document.getElementById('calc-display');
+                let numbers = textbox.value.split(operator_regex);
+                let lastnum = numbers[numbers.length - 1];
                 if (!dec_dot_regex.test(lastnum) && number_regex.test(lastnum)) {
                     textbox.value += caller.innerText.trim();
                 }
@@ -56,66 +50,88 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     }
 
-    var clear_buttons = document.getElementsByClassName('btn-input-clear')
-    for (var i = 0; i < clear_buttons.length; i++) {
+    let clear_buttons = document.getElementsByClassName('btn-input-clear');
+    for (let i = 0; i < clear_buttons.length; i++) {
         clear_buttons[i].addEventListener('click', function () {
-            var caller = this;
+            let caller = this;
             if (caller instanceof HTMLElement) {
-                var textbox = document.getElementById('calc-display');
+                let textbox = document.getElementById('calc-display');
                 textbox.value = "";
             }
         });
     }
 
-    var calc_button = document.getElementById('btn-calculate')
+    let calc_button = document.getElementById('btn-calculate');
     calc_button.addEventListener('click', async function () {
-        var caller = this;
+        let caller = this;
+        let errorContainer = document.getElementById('error-container');
+        errorContainer.innerText = "";
         if (caller instanceof HTMLElement) {
-            var textbox = document.getElementById('calc-display');
-            var expression = textbox.value;
-            var result = await calculate_expression(expression);
+            let textbox = document.getElementById('calc-display');
+            let expression = textbox.value;
+            if (expression == "" || expression == undefined || expression == null) {
+                displayError("Empty calculation expression.");
+                return;
+            }
+            if (!isValidExpression(expression)) {
+                displayError("Invalid expression format.");
+                return;
+            }
+            let result = await calculate_expression(expression);
             if (result !== "Error") {
-                var saving_result = await save_result(expression, result);
-                if (saving_result) {
-                    textbox.value = result;
-                    var records = await loadLastCalculations(records_count);
-                    updateHistory(records);
+                if (expression !== result) {
+                    let saving_result = await save_result(expression, result);
+                    if (saving_result) {
+                        textbox.value = result;
+                        let records = await loadLastCalculations(records_count);
+                        updateHistory(records);
+                    } else {
+                        console.error("Failed to save the calculation record.");
+                    }
                 } else {
-                    alert("Failed to save the calculation record.");
+                    textbox.value = result;
                 }
             } else {
-                alert("Invalid expression.");
+                console.error("Invalid expression.", expression);
             }
         }
     });
 
-    async function calculate_expression(expression)
-    {
-        try
-        {
-            const response = await fetch(`https://localhost:7273/Calculate?expr=${encodeURIComponent(expression)}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'text/plain'
+    function isValidExpression(expression) {
+        expression = expression.replace(" ", "");
+        for (let op of operators) {
+            let parts = expression.split(op);
+            if (parts.length == 2) {
+                if (!isNaN(parseFloat(parts[0])) && !isNaN(parseFloat(parts[1]))) {
+                    return true;
                 }
-            });
-            console.log(response);
-            if (response.ok)
-            {
-                const result = await response.text();
-                console.log("RESULT: " + expression + " = " + integersOnlyCheckbox.checked?round(result) :result);
-                return result.toString();
-            }
-            else
-            {
-                 console.error("Error calculating expression:", response.statusText);
-                 return "Error";
             }
         }
-        catch (error)
-        {
-                console.error("Error calculating expression:", error);
+        return !isNaN(parseFloat(expression));
+    }
+
+    async function calculate_expression(expression) {
+        try {
+            const response = await fetch(`https://localhost:7273/Calculate?expr=${encodeURIComponent(expression)}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'text/plain'
+                }
+            });
+            if (response.ok) {
+                let result = await response.text();
+                const integersOnlyCheckbox = document.getElementById('integers-only-checkbox');
+                if (integersOnlyCheckbox.checked) {
+                    result = Math.floor(parseFloat(result)).toString();
+                }
+                return result;
+            } else {
+                handleErrorResponse(response);
                 return "Error";
+            }
+        } catch (error) {
+            displayError("Error calculating expression:", error);
+            return "Error";
         }
     }
 
@@ -128,16 +144,18 @@ document.addEventListener('DOMContentLoaded', async function () {
                     'Content-Type': 'text/plain'
                 }
             });
-            return response.ok;
+            if (response.ok) {
+                return true;
+            } else {
+                handleErrorResponse(response);
+                return false;
+            }
         } catch (error) {
-            console.error("Error saving calculation record:", error);
+            displayError("Error saving calculation record:", error);
             return false;
         }
     }
 
-
-
-    // Function to load the last "count" calculations
     async function loadLastCalculations(count) {
         try {
             const response = await fetch(`https://localhost:7273/LoadLastCalculations?count=${count}`, {
@@ -146,37 +164,67 @@ document.addEventListener('DOMContentLoaded', async function () {
                     'Content-Type': 'application/json'
                 }
             });
-
             if (response.ok) {
                 const data = await response.json();
                 return data.records;
             } else {
-                console.error("Error loading last calculations:", response.statusText);
+                handleErrorResponse(response);
                 return [];
             }
         } catch (error) {
-            console.error("Error loading last calculations:", error);
+            displayError("Error loading last calculations:", error);
             return [];
         }
     }
 
-    // Function to update the history section with the retrieved records
+    function handleErrorResponse(response) {
+        switch (response.status) {
+            case 400:
+                displayError("Invalid input.");
+                break;
+            case 401:
+                displayError("Unauthorized access. Please log in.");
+                break;
+            case 403:
+                displayError("Forbidden. You do not have permission to access this resource.");
+                break;
+            case 404:
+                displayError("Resource not found.");
+                break;
+            case 500:
+                displayError("Internal server error. Please try again later.");
+                break;
+            case 503:
+                displayError("Server is currently unavailable. Please try again later.");
+                break;
+            default:
+                displayError("An unexpected error occurred. Please try again later.");
+                break;
+        }
+    }
+
+    function displayError(...args) {
+        console.error(...args);
+        let errorContainer = document.getElementById('error-container');
+        errorContainer.innerText = args.join(' ');
+        errorContainer.style.display = 'block';
+    }
+
     function updateHistory(records) {
-        var historyList = document.getElementById('calc-history');
+        let historyList = document.getElementById('calc-history');
         historyList.innerHTML = ''; // Clear existing history
         records.forEach(record => {
-            var newItem = document.createElement('li');
+            let newItem = document.createElement('li');
             newItem.className = 'list-group-item';
             newItem.textContent = record;
             historyList.appendChild(newItem);
         });
     }
 
-    // Event listener for the 'integers-only-checkbox'
-    var integersOnlyCheckbox = document.getElementById('integers-only-checkbox');
+    let integersOnlyCheckbox = document.getElementById('integers-only-checkbox');
     integersOnlyCheckbox.addEventListener('change', function () {
-        var decimalPointButton = document.getElementById('decimal-point-button');
-        var calcDisplay = document.getElementById('calc-display');
+        let decimalPointButton = document.getElementById('decimal-point-button');
+        let calcDisplay = document.getElementById('calc-display');
         if (this.checked) {
             decimalPointButton.disabled = true;
         } else {
@@ -184,5 +232,4 @@ document.addEventListener('DOMContentLoaded', async function () {
         }
         calcDisplay.value = ""; // Clear the display
     });
-
 });

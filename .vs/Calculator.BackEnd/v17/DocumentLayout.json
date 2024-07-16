@@ -1,0 +1,101 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\Programs\\C#\\CalculatorSeparated\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}|Calculator.MathLibTests\\Calculator.MathLibTests.csproj|h:\\programs\\c#\\calculatorseparated\\calculator.mathlibtests\\mathlibtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}|Calculator.MathLibTests\\Calculator.MathLibTests.csproj|solutionrelative:calculator.mathlibtests\\mathlibtests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41C3548F-3D08-4DEA-A635-B87610A34B36}|Calculator.APITests\\Calculator.APITests.csproj|h:\\programs\\c#\\calculatorseparated\\calculator.apitests\\controllers\\calculationexpressionrecordscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41C3548F-3D08-4DEA-A635-B87610A34B36}|Calculator.APITests\\Calculator.APITests.csproj|solutionrelative:calculator.apitests\\controllers\\calculationexpressionrecordscontrollertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ECEA5B3-23B2-4FCA-9F15-4E913A1A02D2}|Calculator.API\\Calculator.API.csproj|h:\\programs\\c#\\calculatorseparated\\calculator.api\\controllers\\calculationexpressionrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ECEA5B3-23B2-4FCA-9F15-4E913A1A02D2}|Calculator.API\\Calculator.API.csproj|solutionrelative:calculator.api\\controllers\\calculationexpressionrecordscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ECEA5B3-23B2-4FCA-9F15-4E913A1A02D2}|Calculator.API\\Calculator.API.csproj|h:\\programs\\c#\\calculatorseparated\\calculator.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ECEA5B3-23B2-4FCA-9F15-4E913A1A02D2}|Calculator.API\\Calculator.API.csproj|solutionrelative:calculator.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CCE674BE-944C-4B98-8660-DAAE93128F4C}|Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj|h:\\programs\\c#\\calculatorseparated\\calculator.errorhandler\\errorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CCE674BE-944C-4B98-8660-DAAE93128F4C}|Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj|solutionrelative:calculator.errorhandler\\errorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MathLibTests.cs",
+              "DocumentMoniker": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLibTests\\MathLibTests.cs",
+              "RelativeDocumentMoniker": "Calculator.MathLibTests\\MathLibTests.cs",
+              "ToolTip": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLibTests\\MathLibTests.cs",
+              "RelativeToolTip": "Calculator.MathLibTests\\MathLibTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T10:17:11.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CalculationExpressionRecordsControllerTests.cs",
+              "DocumentMoniker": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.APITests\\Controllers\\CalculationExpressionRecordsControllerTests.cs",
+              "RelativeDocumentMoniker": "Calculator.APITests\\Controllers\\CalculationExpressionRecordsControllerTests.cs",
+              "ToolTip": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.APITests\\Controllers\\CalculationExpressionRecordsControllerTests.cs",
+              "RelativeToolTip": "Calculator.APITests\\Controllers\\CalculationExpressionRecordsControllerTests.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-16T10:16:45.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculationExpressionRecordsController.cs",
+              "DocumentMoniker": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\Controllers\\CalculationExpressionRecordsController.cs",
+              "RelativeDocumentMoniker": "Calculator.API\\Controllers\\CalculationExpressionRecordsController.cs",
+              "ToolTip": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\Controllers\\CalculationExpressionRecordsController.cs",
+              "RelativeToolTip": "Calculator.API\\Controllers\\CalculationExpressionRecordsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T17:56:50.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\Program.cs",
+              "RelativeDocumentMoniker": "Calculator.API\\Program.cs",
+              "ToolTip": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.API\\Program.cs",
+              "RelativeToolTip": "Calculator.API\\Program.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAIBJwAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T14:58:23.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorHandler.cs",
+              "DocumentMoniker": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\ErrorHandler.cs",
+              "RelativeDocumentMoniker": "Calculator.ErrorHandler\\ErrorHandler.cs",
+              "ToolTip": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\ErrorHandler.cs",
+              "RelativeToolTip": "Calculator.ErrorHandler\\ErrorHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-15T14:58:14.114Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

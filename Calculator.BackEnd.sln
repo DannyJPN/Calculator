@@ -8,9 +8,11 @@ Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Calculator.Database", "Calc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.MathLib", "Calculator.MathLib\Calculator.MathLib.csproj", "{E7A3AB5C-0B20-4B35-B943-DB184042EC2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculation.UnitTests", "Calculation.UnitTests\Calculation.UnitTests.csproj", "{2DC61EB0-26D4-4D45-8057-70A034D20285}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator.ErrorHandler", "Calculator.ErrorHandler\Calculator.ErrorHandler.csproj", "{CCE674BE-944C-4B98-8660-DAAE93128F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.ErrorHandler", "Calculator.ErrorHandler\Calculator.ErrorHandler.csproj", "{CCE674BE-944C-4B98-8660-DAAE93128F4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.APITests", "Calculator.APITests\Calculator.APITests.csproj", "{41C3548F-3D08-4DEA-A635-B87610A34B36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.MathLibTests", "Calculator.MathLibTests\Calculator.MathLibTests.csproj", "{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,14 +34,18 @@ Global
 		{E7A3AB5C-0B20-4B35-B943-DB184042EC2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7A3AB5C-0B20-4B35-B943-DB184042EC2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7A3AB5C-0B20-4B35-B943-DB184042EC2D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2DC61EB0-26D4-4D45-8057-70A034D20285}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCE674BE-944C-4B98-8660-DAAE93128F4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41C3548F-3D08-4DEA-A635-B87610A34B36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41C3548F-3D08-4DEA-A635-B87610A34B36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41C3548F-3D08-4DEA-A635-B87610A34B36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41C3548F-3D08-4DEA-A635-B87610A34B36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04C365B3-5CC2-46E4-98D7-CD9732CC4C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

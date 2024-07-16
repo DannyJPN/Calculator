@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.UI\\Calculator.UI.csproj": {}
+    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.UI\\Calculator.UI.csproj": {}
   },
   "projects": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.UI\\Calculator.UI.csproj": {
+    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.UI\\Calculator.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.UI\\Calculator.UI.csproj",
+        "projectUniqueName": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.UI\\Calculator.UI.csproj",
         "projectName": "Calculator.UI",
-        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.UI\\Calculator.UI.csproj",
+        "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.UI\\Calculator.UI.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calcul\\Calculator.UI\\obj\\",
+        "outputPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.UI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,20 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Enrichers.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

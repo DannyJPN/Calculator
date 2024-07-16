@@ -9,6 +9,6 @@ namespace Calculator.API.DatabaseContexts
         {
         }
 
-        public DbSet<CalculationExpressionRecord> CalculationExpressionRecord { get; set; }
+        public virtual DbSet<CalculationExpressionRecord> CalculationExpressionRecord { get; set; }
     }
 }

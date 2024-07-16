@@ -16,6 +16,6 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Calculator.APITests
-build_property.ProjectDir = H:\Programs\C#\CalculatorSeparated\Calculator.APITests\
+build_property.ProjectDir = E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.APITests\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

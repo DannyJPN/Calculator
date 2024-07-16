@@ -20,3 +20,15 @@ E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Da
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\obj\Debug\Calculator.Database.sqlproj.AssemblyReference.cache
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\obj\Debug\Calculator.Database.dll
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calc-e180f46\Calculator.Database\obj\Debug\Calculator.Database.pdb
+H:\Programs\C#\CalculatorSeparated\Calculator.Database\bin\Debug\Calculator.Database.dacpac
+H:\Programs\C#\CalculatorSeparated\Calculator.Database\bin\Debug\Calculator.Database.dll
+H:\Programs\C#\CalculatorSeparated\Calculator.Database\bin\Debug\Calculator.Database.pdb
+H:\Programs\C#\CalculatorSeparated\Calculator.Database\obj\Debug\Calculator.Database.sqlproj.AssemblyReference.cache
+H:\Programs\C#\CalculatorSeparated\Calculator.Database\obj\Debug\Calculator.Database.dll
+H:\Programs\C#\CalculatorSeparated\Calculator.Database\obj\Debug\Calculator.Database.pdb
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Database\bin\Debug\Calculator.Database.dacpac
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Database\bin\Debug\Calculator.Database.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Database\bin\Debug\Calculator.Database.pdb
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Database\obj\Debug\Calculator.Database.sqlproj.AssemblyReference.cache
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Database\obj\Debug\Calculator.Database.dll
+E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Database\obj\Debug\Calculator.Database.pdb

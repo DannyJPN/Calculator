@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.API\\Calculator.API.csproj": {}
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.API\\Calculator.API.csproj": {}
   },
   "projects": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.API\\Calculator.API.csproj": {
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.API\\Calculator.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.API\\Calculator.API.csproj",
+        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.API\\Calculator.API.csproj",
         "projectName": "Calculator.API",
-        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.API\\Calculator.API.csproj",
+        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.API\\Calculator.API.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.API\\obj\\",
+        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.MathLib\\Calculator.MathLib.csproj": {
-                "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.MathLib\\Calculator.MathLib.csproj"
+              "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj": {
+                "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj"
               }
             }
           }
@@ -126,14 +126,14 @@
         }
       }
     },
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.MathLib\\Calculator.MathLib.csproj": {
+    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.MathLib\\Calculator.MathLib.csproj",
+        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj",
         "projectName": "Calculator.MathLib",
-        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.MathLib\\Calculator.MathLib.csproj",
+        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator-9ca30c9\\Calculator.MathLib\\obj\\",
+        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
