@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Calculator.ErrorHandler\Calculator.ErrorHandler.csproj" />
     <ProjectReference Include="..\Calculator.MathLib\Calculator.MathLib.csproj" />
   </ItemGroup>
 

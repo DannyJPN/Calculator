@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj": {}
+    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj": {}
   },
   "projects": {
-    "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj": {
+    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj",
-        "projectName": "Calculator.MathLib",
-        "projectPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj",
+        "projectUniqueName": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj",
+        "projectName": "Calculator.ErrorHandler",
+        "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj",
         "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
-        "outputPath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\obj\\",
+        "outputPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,6 +33,89 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Serilog.Enrichers.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Serilog.Extensions.Logging.File": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj",
+        "projectName": "Calculator.MathLib",
+        "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj",
+        "packagesPath": "C:\\Users\\Dan Krupa\\.nuget\\packages\\",
+        "outputPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\ProgramFiles\\Programy\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Dan Krupa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj": {
+                "projectPath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.ErrorHandler\\Calculator.ErrorHandler.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

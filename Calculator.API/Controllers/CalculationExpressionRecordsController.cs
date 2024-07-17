@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Calculator.API.DTO;
 using Calculator.API.DatabaseContexts;
 using Calculator.MathLib;
+using Calculator.ErrorHandler;
 
 namespace Calculator.API.Controllers
 {
@@ -43,11 +44,13 @@ namespace Calculator.API.Controllers
             }
             catch (DbUpdateException ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 _logger.LogError(ex, "Database update error while saving calculation record.");
                 return StatusCode(503, "Database is currently unavailable. Please try again later.");
             }
             catch (Exception ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 _logger.LogError(ex, "Error saving calculation record.");
                 return StatusCode(500, "Internal server error.");
             }
@@ -75,11 +78,13 @@ namespace Calculator.API.Controllers
             }
             catch (DivideByZeroException ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 _logger.LogError(ex, "Divide by zero error in expression: {Expression}", expr);
                 return BadRequest("Cannot divide by zero.");
             }
             catch (Exception ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 _logger.LogError(ex, "Error calculating expression.");
                 return StatusCode(500, "Internal server error.");
             }
@@ -108,11 +113,13 @@ namespace Calculator.API.Controllers
             }
             catch (DbUpdateException ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 _logger.LogError(ex, "Database update error while loading last calculation records.");
                 return StatusCode(503, "Database is currently unavailable. Please try again later.");
             }
             catch (Exception ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 _logger.LogError(ex, "Error loading last calculation records.");
                 return StatusCode(500, "Internal server error.");
             }

@@ -1,3 +1,4 @@
+using Calculator.ErrorHandler;
 using System;
 using System.IO;
 
@@ -34,6 +35,7 @@ namespace Calculator.MathLib
             }
             catch (Exception ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 Console.WriteLine($"Error calculating expression: {ex.Message}\n{ex.StackTrace}");
                 throw;
             }
@@ -92,6 +94,7 @@ namespace Calculator.MathLib
             }
             catch (Exception ex)
             {
+                ErrorHandler.ErrorHandler.SendError(ex);
                 Console.WriteLine($"Error evaluating expression: {ex.Message}\n{ex.StackTrace}");
                 throw;
             }

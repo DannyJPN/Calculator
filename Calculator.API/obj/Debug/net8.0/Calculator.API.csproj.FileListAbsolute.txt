@@ -1889,3 +1889,5 @@ E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.API\
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.API\obj\Debug\net8.0\Calculator.API.pdb
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.API\obj\Debug\net8.0\Calculator.API.genruntimeconfig.cache
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.API\obj\Debug\net8.0\ref\Calculator.API.dll
+H:\Programs\C#\CalculatorSeparated\Calculator.API\bin\Debug\net8.0\Calculator.ErrorHandler.dll
+H:\Programs\C#\CalculatorSeparated\Calculator.API\bin\Debug\net8.0\Calculator.ErrorHandler.pdb

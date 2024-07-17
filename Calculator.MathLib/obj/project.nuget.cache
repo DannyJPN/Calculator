@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rbImbAcAuC8=",
+  "dgSpecHash": "suIUXxUWx/Y=",
   "success": true,
-  "projectFilePath": "E:\\ProgramFiles\\Programy\\GPTPilot\\gpt-pilot\\workspace\\calculator\\Calculator.MathLib\\Calculator.MathLib.csproj",
+  "projectFilePath": "H:\\Programs\\C#\\CalculatorSeparated\\Calculator.MathLib\\Calculator.MathLib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dan Krupa\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.0.2\\microsoft.aspnetcore.http.abstractions.2.0.2.nupkg.sha512",
     "C:\\Users\\Dan Krupa\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.0.2\\microsoft.aspnetcore.http.features.2.0.2.nupkg.sha512",

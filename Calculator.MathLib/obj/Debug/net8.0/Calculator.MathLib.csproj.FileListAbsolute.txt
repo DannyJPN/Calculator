@@ -48,3 +48,6 @@ E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.Math
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.MathLib\obj\Debug\net8.0\refint\Calculator.MathLib.dll
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.MathLib\obj\Debug\net8.0\Calculator.MathLib.pdb
 E:\ProgramFiles\Programy\GPTPilot\gpt-pilot\workspace\calculator\Calculator.MathLib\obj\Debug\net8.0\ref\Calculator.MathLib.dll
+H:\Programs\C#\CalculatorSeparated\Calculator.MathLib\bin\Debug\net8.0\Calculator.ErrorHandler.dll
+H:\Programs\C#\CalculatorSeparated\Calculator.MathLib\bin\Debug\net8.0\Calculator.ErrorHandler.pdb
+H:\Programs\C#\CalculatorSeparated\Calculator.MathLib\obj\Debug\net8.0\Calculat.06D5593C.Up2Date
